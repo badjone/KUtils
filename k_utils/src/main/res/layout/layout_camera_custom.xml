@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_camera_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_999999"
+        android:orientation="vertical"/>
+
+    <Chronometer
+        android:id="@+id/c_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:text="00:00"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/img_camera_switch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_camera_menu_switch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/img_capture"/>
+
+    <ImageView
+        android:id="@+id/img_capture"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/player_record"
+        app:layout_constraintBottom_toBottomOf="@+id/img_camera_switch"
+        app:layout_constraintLeft_toRightOf="@+id/img_camera_switch"
+        app:layout_constraintRight_toLeftOf="@+id/img_flash"
+        app:layout_constraintTop_toTopOf="@+id/img_camera_switch"/>
+
+    <ImageView
+        android:id="@+id/img_flash"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_flash_off_white"
+        app:layout_constraintBottom_toBottomOf="@+id/img_camera_switch"
+        app:layout_constraintLeft_toRightOf="@+id/img_capture"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_camera_switch"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

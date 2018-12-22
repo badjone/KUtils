@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--照片-->
+    <string-array name="select_photo">
+        <item>@string/txt_camera</item>
+        <item>@string/txt_album</item>
+    </string-array>
+    <!--性别-->
+    <string-array name="user_sex">
+        <item>@string/txt_sex_man</item>
+        <item>@string/txt_sex_woman</item>
+    </string-array>
+
+    <!--血型-->
+    <string-array name="user_blood">
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+
+
+    <!--语言-->
+    <string-array name="language">
+        <item>@string/txt_cn</item>
+        <item>@string/txt_en</item>
+    </string-array>
+</resources>

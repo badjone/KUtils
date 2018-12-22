@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--titleView-->
+    <!--<declare-styleable name="TitleView">-->
+    <!--<attr name="title" format="string" />-->
+    <!--<attr name="rightIcon1" format="reference" />-->
+    <!--<attr name="rightIcon2" format="reference" />-->
+    <!--<attr name="titleType">-->
+    <!--<enum name="parent" value="1" />-->
+    <!--<enum name="child" value="2" />-->
+    <!--</attr>-->
+    <!--</declare-styleable>-->
+
+    <declare-styleable name="ItemLayout">
+        <attr name="lefttitle" format="string"/>
+        <attr name="rightTxt" format="string"/>
+        <attr name="icon" format="reference"/>
+        <attr name="isShowMoreIcon" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="AutoEditText">
+        <attr name="showDelIcon" format="boolean"/>
+    </declare-styleable>
+
+
+    <!--<declare-styleable name="NumberProgressBar">-->
+    <!--<attr name="progress_current" format="integer" />-->
+    <!--<attr name="progress_max" format="integer" />-->
+
+    <!--<attr name="progress_unreached_color" format="color" />-->
+    <!--<attr name="progress_reached_color" format="color" />-->
+
+    <!--<attr name="progress_reached_bar_height" format="dimension" />-->
+    <!--<attr name="progress_unreached_bar_height" format="dimension" />-->
+
+    <!--<attr name="progress_text_size" format="dimension" />-->
+    <!--<attr name="progress_text_color" format="color" />-->
+
+    <!--<attr name="progress_text_offset" format="dimension" />-->
+
+    <!--<attr name="progress_text_visibility" format="enum">-->
+    <!--<enum name="visible" value="0" />-->
+    <!--<enum name="invisible" value="1" />-->
+    <!--</attr>-->
+    <!--</declare-styleable>-->
+
+    <!--<declare-styleable name="Themes">-->
+    <!--<attr name="numberProgressBarStyle" format="reference" />-->
+    <!--</declare-styleable>-->
+
+    <!--<declare-styleable name="NotificationBadge">-->
+    <!--<attr name="nbTextSize" format="dimension" />-->
+    <!--<attr name="nbTextColor" format="color" />-->
+    <!--<attr name="nbBackground" format="reference" />-->
+    <!--<attr name="nbAnimationEnabled" format="boolean" />-->
+    <!--<attr name="nbAnimationDuration" format="integer" />-->
+    <!--<attr name="nbMaxTextLength" format="integer" />-->
+    <!--<attr name="nbEllipsizeText" format="string" />-->
+    <!--</declare-styleable>-->
+
+    <!--<declare-styleable name="WheelView">-->
+    <!--<attr name="unitHeight" format="dimension" />-->
+    <!--<attr name="itemNumber" format="integer" />-->
+    <!--<attr name="normalTextColor" format="color" />-->
+    <!--<attr name="normalTextSize" format="dimension" />-->
+    <!--<attr name="selectedTextColor" format="color" />-->
+    <!--<attr name="selectedTextSize" format="dimension" />-->
+    <!--<attr name="isCyclic" format="boolean" />-->
+    <!--<attr name="lineColor" format="color" />-->
+    <!--<attr name="lineHeight" format="dimension" />-->
+    <!--<attr name="noEmpty" format="boolean" />-->
+    <!--<attr name="isEnable" format="boolean" />-->
+    <!--</declare-styleable>-->
+</resources>

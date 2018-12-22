@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/bg_color"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dialog_base_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/tip"
+            android:textStyle="bold"
+            android:visibility="visible"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dialog_base_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="60dp"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dialog_base_title"
+            tools:layout_editor_absoluteY="39dp"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_dialog_base_next"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="0.1dp"
+            android:background="@drawable/selector_item_ll"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textAllCaps="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn_dialog_base_cancel"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dialog_base_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_dialog_base_cancel"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="0.1dp"
+            android:background="@drawable/selector_item_ll"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            app:layout_constraintLeft_toRightOf="@+id/btn_dialog_base_next"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dialog_base_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
