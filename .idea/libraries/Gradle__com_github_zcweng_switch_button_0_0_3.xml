@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.zcweng:switch-button-0.0.3">
+    <CLASSES>
+      <root url="jar://E:/studioCache/.gradle/caches/transforms-1/files-1.1/switch-button-0.0.3.aar/f4ecd315bdb50f91e29336d59f609bdf/jars/classes.jar!/" />
+      <root url="file://E:/studioCache/.gradle/caches/transforms-1/files-1.1/switch-button-0.0.3.aar/f4ecd315bdb50f91e29336d59f609bdf/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/studioCache/.gradle/caches/modules-2/files-2.1/com.github.zcweng/switch-button/0.0.3/d5d9516de797694335817ebe65abf1a5649079a2/switch-button-0.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

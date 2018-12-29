@@ -21,7 +21,7 @@ import java.io.File
  *@author Wugx
  *@date   2018/12/21
  */
-class FileModel {
+class FileUploadModel {
     /**
      * fileKey 文件上传的key
      * params  普通参数

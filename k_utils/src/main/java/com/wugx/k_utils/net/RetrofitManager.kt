@@ -54,7 +54,7 @@ object RetrofitManager {
                 //https认证 如果要使用https且为自定义证书,自行配制证书。
 //                    .sslSocketFactory(SslContextFactory.getSSLSocketFactoryForTwoWay())
 //                    .hostnameVerifier(SafeHostnameVerifier())
-//                .cache(cache)
+                .cache(cache)
     }
 
      fun addInterceptorParams(map: Map<String, String>): CommonParamsInterceptor {

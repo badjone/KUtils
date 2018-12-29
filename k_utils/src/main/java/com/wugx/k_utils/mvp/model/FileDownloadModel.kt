@@ -21,7 +21,7 @@ import okhttp3.ResponseBody
 import java.io.File
 
 /**
- *文件下载
+ *文件下载 apk
  *
  *@author Wugx
  *@date   2018/12/22
@@ -61,7 +61,7 @@ class FileDownloadModel {
                             }
 
                             override fun onNext(t: ResponseBody) {
-
+                                //下载完成
                             }
 
                             override fun onError(e: Throwable) {
@@ -82,12 +82,15 @@ class FileDownloadModel {
             val file = File(sdPath, down_file_name)
             FileUtils.createFileByDeleteOldFile(file)
             //写入文件
-            val isComplete = FileIOUtils.writeFileFromIS(file, responseBody.byteStream())
-            //切换到主线程
-            Observable.just(file)
+            Observable.just(responseBody.byteStream())
+                    .map {
+                        //子线程写入文件
+                        FileIOUtils.writeFileFromIS(file, responseBody.byteStream())
+                    }
                     .compose(SchedulerUtils.ioToMain())
                     .subscribe {
-                        if (isComplete) listener.downComplete(file)
+                        //回调写入文件结果
+                        if (it) listener.downComplete(file) else listener.downError("写入文件异常")
                     }
         }
     }

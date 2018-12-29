@@ -6,6 +6,7 @@ import com.blankj.utilcode.util.ActivityUtils
 import com.wugx.k_utils.widget.dialog.BaseDialog
 import com.wugx.k_utils.widget.dialog.LoadingDialog
 
+
 /**
  * 一些 ui显示的公共类
  *
@@ -19,7 +20,9 @@ object UiUtils {
      * @param msg
      */
     fun showLoadDialog(msg: String) {
-        val topActivity = ActivityUtils.getTopActivity() as AppCompatActivity ?: return
+
+        val topActivity = ActivityUtils.getTopActivity() ?: return
+        topActivity as AppCompatActivity
         val fragment = LoadingDialog.newInstance(msg)
         val fm = topActivity.supportFragmentManager
         val ft = fm.beginTransaction()
@@ -48,7 +51,8 @@ object UiUtils {
      *
      */
     fun showBaseDialog(listener: BaseDialog.DialogBaseListener, vararg params: String) {
-        val topActivity = ActivityUtils.getTopActivity() as AppCompatActivity ?: return
+        val topActivity = ActivityUtils.getTopActivity() ?: return
+        topActivity as AppCompatActivity
         var title: String? = null
         var content: String? = null
         var next: String? = null
@@ -84,5 +88,6 @@ object UiUtils {
         ft.commitAllowingStateLoss()
         ft.show(fragment)
     }
+
 
 }

@@ -137,7 +137,7 @@ abstract class BaseFragment : RxFragment(), IBaseView {
         baseActivity.setSupportActionBar(mToolBar)
         actionbar = baseActivity.supportActionBar!!
         actionbar.setDisplayShowHomeEnabled(false)
-        actionbar.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+        actionbar.setHomeAsUpIndicator(R.mipmap.ic_arrow_back)
 
         //set back icon
 //            actionbar!!.setDisplayHomeAsUpEnabled(true)
@@ -157,9 +157,7 @@ abstract class BaseFragment : RxFragment(), IBaseView {
 
     fun setTvTitle(txt: String) {
         if (TextUtils.isEmpty(txt)) return
-        tvTitle?.let {
-            it.text = txt
-        }
+        tvTitle.text = txt
     }
 
     fun setTvTitle(txtId: Int) {

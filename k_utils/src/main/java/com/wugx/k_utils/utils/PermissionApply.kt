@@ -11,7 +11,7 @@ import com.blankj.utilcode.util.Utils
 import com.wugx.k_utils.R
 
 /**
- * 权限申请
+ * 权限申请 在此申请一些公共权限
  *
  * @author Wugx
  * @date 2018/11/8

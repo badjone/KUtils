@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: cn.yipianfengye.android:zxing-library-2.2">
     <CLASSES>
-      <root url="jar://E:/studioCache/.gradle/caches/transforms-1/files-1.1/zxing-library-2.2.aar/ff9303b7f5b52bea26fdf46705a34fce/jars/classes.jar!/" />
-      <root url="file://E:/studioCache/.gradle/caches/transforms-1/files-1.1/zxing-library-2.2.aar/ff9303b7f5b52bea26fdf46705a34fce/res" />
-      <root url="jar://E:/studioCache/.gradle/caches/transforms-1/files-1.1/zxing-library-2.2.aar/ff9303b7f5b52bea26fdf46705a34fce/jars/libs/core_3.0.1.jar!/" />
+      <root url="file://E:/studioCache/.gradle/caches/transforms-1/files-1.1/jetified-zxing-library-2.2.aar/56bf0efde8beebfe89cd7fa47bf0725c/res" />
+      <root url="jar://E:/studioCache/.gradle/caches/transforms-1/files-1.1/jetified-zxing-library-2.2.aar/56bf0efde8beebfe89cd7fa47bf0725c/jars/libs/core_3.0.1.jar!/" />
+      <root url="jar://E:/studioCache/.gradle/caches/transforms-1/files-1.1/jetified-zxing-library-2.2.aar/56bf0efde8beebfe89cd7fa47bf0725c/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

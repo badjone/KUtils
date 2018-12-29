@@ -86,7 +86,9 @@ abstract class BaseActivity : RxAppCompatActivity(), IBaseView {
         layout.orientation = LinearLayout.VERTICAL
         val parms = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT, 1f)
-        val contentLayout = LayoutInflater.from(this).inflate(layoutId, null)
+
+
+        val contentLayout = LayoutInflater.from(this).inflate(layoutId, layout,false)
         if (isShowTitle()) {
             val layoutTitle = View.inflate(this, R.layout.layout_title, null)
             val p = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
@@ -127,7 +129,7 @@ abstract class BaseActivity : RxAppCompatActivity(), IBaseView {
         setSupportActionBar(mToolbar)
 
         supportActionBar!!.setDisplayShowHomeEnabled(false)
-        supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+        supportActionBar!!.setHomeAsUpIndicator(R.mipmap.ic_arrow_back)
 
         val topActivity = ActivityUtils.getTopActivity()
         //设置返回按钮
@@ -219,7 +221,7 @@ abstract class BaseActivity : RxAppCompatActivity(), IBaseView {
         }
         mLoadService.setCallBack(ErrorCallback::class.java) { _, view -> mTvErrorMsg = view.findViewById(R.id.tv_error_msg) }
         mLoadService.setCallBack(EmptyCallback::class.java) { _, view -> mTvEmpty = view.findViewById(R.id.tv_empty) }
-        mLoadService.setCallBack(EmptyCallback::class.java) { context, view ->
+        mLoadService.setCallBack(EmptyCallback::class.java) { _, view ->
             mTvEmpty = view.findViewById(R.id.tv_empty)
             view.setOnClickListener {
                 //                ToastUtils.showShort("----")

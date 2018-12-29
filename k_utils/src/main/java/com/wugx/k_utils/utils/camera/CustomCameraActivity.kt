@@ -192,11 +192,11 @@ class CustomCameraActivity : AppCompatActivity(), View.OnClickListener {
         if (!isRecording && !cameraFront) {
             if (isFlash) {
                 isFlash = false
-                img_flash.setImageResource(R.drawable.ic_flash_off_white)
+                img_flash.setImageResource(R.mipmap.ic_flash_off_white)
                 setFlashMode(Camera.Parameters.FLASH_MODE_OFF)
             } else {
                 isFlash = true
-                img_flash.setImageResource(R.drawable.ic_flash_on_white)
+                img_flash.setImageResource(R.mipmap.ic_flash_on_white)
                 setFlashMode(Camera.Parameters.FLASH_MODE_TORCH)
             }
         }
@@ -257,7 +257,7 @@ class CustomCameraActivity : AppCompatActivity(), View.OnClickListener {
                 mCamera = Camera.open(cameraId)
                 if (isFlash) {
                     isFlash = false
-                    img_flash.setImageResource(R.drawable.ic_flash_off_white)
+                    img_flash.setImageResource(R.mipmap.ic_flash_off_white)
                     mCpPreview!!.setFlashMode(Camera.Parameters.FLASH_MODE_OFF)
                 }
                 // mPicture = getPictureCallback();
@@ -295,7 +295,7 @@ class CustomCameraActivity : AppCompatActivity(), View.OnClickListener {
                 } else {
                     changeRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
                 }
-                img_capture.setImageResource(R.drawable.player_stop)
+                img_capture.setImageResource(R.mipmap.player_stop)
             } catch (ex: Exception) {
                 Log.i("---", "Exception in thread")
                 setResult(CameraUtils.RESULT_CODE_FOR_RECORD_VIDEO_FAILED)
@@ -310,7 +310,7 @@ class CustomCameraActivity : AppCompatActivity(), View.OnClickListener {
     private fun stopPlay() {
         mMediaRecorder!!.stop() //停止
         stopChronometer()
-        img_capture.setImageResource(R.drawable.player_record)
+        img_capture.setImageResource(R.mipmap.player_record)
         changeRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR)
         ToastUtils.showShort(R.string.video_captured)
         isRecording = false
@@ -484,13 +484,13 @@ class CustomCameraActivity : AppCompatActivity(), View.OnClickListener {
                 cameraId = findBackFacingCamera()
                 if (isFlash) {
                     mCpPreview!!.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH)
-                    img_flash.setImageResource(R.drawable.ic_flash_on_white)
+                    img_flash.setImageResource(R.mipmap.ic_flash_on_white)
                 }
             } else if (!frontal) {
                 cameraId = findBackFacingCamera()
                 if (isFlash) {
                     mCpPreview!!.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH)
-                    img_flash.setImageResource(R.drawable.ic_flash_on_white)
+                    img_flash.setImageResource(R.mipmap.ic_flash_on_white)
                 }
             }
             mCamera = Camera.open(cameraId)

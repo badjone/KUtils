@@ -19,7 +19,7 @@ object KUtils {
     lateinit var base_url: String
     lateinit var map: Map<String, String>
 
-    fun init(app: Application):KUtils {
+    fun init(app: Application): KUtils {
         Utils.init(app)
         initSmartLayout()
         initLoadSir()
@@ -28,16 +28,18 @@ object KUtils {
 
     /**
      * 设置网络请求参数
+     *
+     * paramsMap 公共参数...
      */
-    fun initNetParams(baseUrl: String, paramsMap: Map<String, String>) :KUtils{
+    fun initNetParams(baseUrl: String, paramsMap: Map<String, String>): KUtils {
         base_url = baseUrl
         map = paramsMap
         return this
     }
 
     private fun initSmartLayout() {
-        SmartRefreshLayout.setDefaultRefreshHeaderCreator { context, _ ->
-            FalsifyHeader(context)
+        SmartRefreshLayout.setDefaultRefreshHeaderCreator { mContext, _ ->
+            FalsifyHeader(mContext)
         }
         //设置全局的Footer构建器
         SmartRefreshLayout.setDefaultRefreshFooterCreator { context, _ ->
@@ -52,7 +54,7 @@ object KUtils {
                 .addCallback(LoadingCallback())
                 .addCallback(TimeoutCallback())
                 .addCallback(CustomCallback())
-                .setDefaultCallback(LoadingCallback::class.java!!)//设置默认状态页
+                .setDefaultCallback(LoadingCallback::class.java)//设置默认状态页
                 .commit()
     }
 }
